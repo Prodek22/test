@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nami Shop</title>
+  <title>Nami UI — Magazin de componente web</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -12,19 +12,19 @@
     <div class="nav-inner">
       <a href="#" class="logo">
         <span class="logo-mark">N</span>
-        <span>Nami<strong>Shop</strong></span>
+        <span>Nami<strong>UI</strong></span>
       </a>
 
       <nav class="nav-menu" id="navMenu">
-        <a href="#shop" class="nav-link active">Magazin</a>
+        <a href="#shop" class="nav-link active">Componente</a>
         <a href="#featured" class="nav-link">Recomandate</a>
         <a href="#about" class="nav-link">Despre</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="btn btn-ghost cart-btn" id="cartBtn" aria-label="Deschide coșul">
-          🛒 Coș
+        <button class="btn btn-ghost cart-btn" id="cartBtn" aria-label="Deschide colecția">
+          📦 Colecție
           <span class="cart-count" id="cartCount">0</span>
         </button>
         <button class="hamburger" id="hamburger" aria-label="Meniu">
@@ -37,11 +37,11 @@
   <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
-      <span class="badge">🔥 Reduceri de vară</span>
-      <h1>Descoperă produse <span class="accent">extraordinare</span></h1>
-      <p>Cele mai noi gadgeturi, accesorii și esențiale — livrate rapid, la prețuri corecte.</p>
+      <span class="badge">✨ Componente HTML &amp; CSS gata de folosit</span>
+      <h1>Elemente web <span class="accent">copy-paste</span></h1>
+      <p>Butoane, carduri, meniuri și formulare frumoase. Previzualizezi live, copiezi codul și le folosești instant în proiectul tău.</p>
       <div class="hero-buttons">
-        <a href="#shop" class="btn btn-primary">Cumpără acum</a>
+        <a href="#shop" class="btn btn-primary">Răsfoiește componentele</a>
         <a href="#featured" class="btn btn-outline">Vezi recomandate</a>
       </div>
     </div>
@@ -51,19 +51,21 @@
   <main>
     <section class="section" id="shop">
       <div class="section-head">
-        <h2>Magazin</h2>
-        <p>Filtrează după categorie și adaugă în coș.</p>
+        <h2>Componente</h2>
+        <p>Filtrează după tip, previzualizează și copiază codul.</p>
       </div>
 
       <!-- Filtre -->
       <div class="filters" id="filters">
         <button class="chip active" data-filter="all">Toate</button>
-        <button class="chip" data-filter="electronice">Electronice</button>
-        <button class="chip" data-filter="accesorii">Accesorii</button>
-        <button class="chip" data-filter="casa">Casă</button>
+        <button class="chip" data-filter="butoane">Butoane</button>
+        <button class="chip" data-filter="carduri">Carduri</button>
+        <button class="chip" data-filter="meniuri">Meniuri</button>
+        <button class="chip" data-filter="formulare">Formulare</button>
+        <button class="chip" data-filter="altele">Altele</button>
       </div>
 
-      <!-- Grid carduri -->
+      <!-- Grid componente -->
       <div class="grid" id="productGrid"></div>
     </section>
 
@@ -71,7 +73,7 @@
     <section class="section featured" id="featured">
       <div class="section-head">
         <h2>Recomandate</h2>
-        <p>Selecția echipei noastre.</p>
+        <p>Componentele cele mai apreciate.</p>
       </div>
       <div class="grid" id="featuredGrid"></div>
     </section>
@@ -80,18 +82,18 @@
     <section class="section about" id="about">
       <div class="about-grid">
         <div>
-          <h2>Despre Nami Shop</h2>
-          <p>Suntem un magazin online dedicat produselor de calitate. Punem accent pe design, durabilitate și o experiență de cumpărare simplă și plăcută.</p>
+          <h2>Despre Nami UI</h2>
+          <p>Nami UI este o bibliotecă de elemente web gata de folosit. Fiecare componentă e scrisă în HTML și CSS pur — fără dependențe, fără framework-uri. O copiezi și funcționează.</p>
           <ul class="features">
-            <li>✅ Livrare în 24-48h</li>
-            <li>✅ Retur gratuit 30 de zile</li>
-            <li>✅ Plată securizată</li>
+            <li>✅ HTML &amp; CSS pur, zero dependențe</li>
+            <li>✅ Previzualizare live, izolată</li>
+            <li>✅ Copiezi codul cu un clic</li>
           </ul>
         </div>
         <div class="stats">
-          <div class="stat"><span>10k+</span>Clienți</div>
-          <div class="stat"><span>500+</span>Produse</div>
-          <div class="stat"><span>4.9★</span>Rating</div>
+          <div class="stat"><span id="statCount">0</span>Componente</div>
+          <div class="stat"><span>5</span>Categorii</div>
+          <div class="stat"><span>100%</span>Free</div>
         </div>
       </div>
     </section>
@@ -103,41 +105,56 @@
       <div>
         <a href="#" class="logo logo-light">
           <span class="logo-mark">N</span>
-          <span>Nami<strong>Shop</strong></span>
+          <span>Nami<strong>UI</strong></span>
         </a>
-        <p>Magazinul tău online de încredere.</p>
+        <p>Biblioteca ta de componente web.</p>
       </div>
       <div>
         <h4>Linkuri</h4>
-        <a href="#shop">Magazin</a>
+        <a href="#shop">Componente</a>
         <a href="#featured">Recomandate</a>
         <a href="#about">Despre</a>
       </div>
       <div>
         <h4>Contact</h4>
-        <a href="mailto:hello@namishop.ro">hello@namishop.ro</a>
+        <a href="mailto:hello@namiui.ro">hello@namiui.ro</a>
         <a href="tel:+40700000000">+40 700 000 000</a>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 Nami Shop. Toate drepturile rezervate.</div>
+    <div class="footer-bottom">© 2026 Nami UI. Toate drepturile rezervate.</div>
   </footer>
 
-  <!-- Cart drawer -->
+  <!-- Collection drawer -->
   <div class="overlay" id="overlay"></div>
   <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
     <div class="cart-head">
-      <h3>Coșul tău</h3>
+      <h3>Colecția ta</h3>
       <button class="btn-close" id="closeCart" aria-label="Închide">✕</button>
     </div>
     <div class="cart-items" id="cartItems"></div>
     <div class="cart-foot">
       <div class="cart-total">
-        <span>Total</span>
-        <strong id="cartTotal">0,00 lei</strong>
+        <span>Componente</span>
+        <strong id="cartTotal">0</strong>
       </div>
-      <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizează comanda</button>
+      <button class="btn btn-primary btn-block" id="copyAllBtn">📋 Copiază tot codul</button>
+      <button class="btn btn-outline btn-block" id="downloadBtn">⬇️ Descarcă .html</button>
     </div>
   </aside>
+
+  <!-- Code modal -->
+  <div class="modal-overlay" id="codeOverlay">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-head">
+        <h3 id="modalTitle">Cod</h3>
+        <button class="btn-close" id="closeModal" aria-label="Închide">✕</button>
+      </div>
+      <pre class="code-block"><code id="modalCode"></code></pre>
+      <div class="modal-foot">
+        <button class="btn btn-primary" id="modalCopy">📋 Copiază codul</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Toast -->
   <div class="toast" id="toast"></div>
